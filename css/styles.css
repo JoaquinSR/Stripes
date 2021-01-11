@@ -1,0 +1,136 @@
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;    
+  }
+/* Estilos contenedor principal */
+.parentBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+  }
+/* Estilos generales columnas */
+.Block{
+    position: absolute;
+    overflow: hidden;
+    width: 20%;
+    min-height: 100vh;
+    cursor: pointer;
+}
+/* Estilos texto */
+.textBlock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;   
+    min-height: 100vh; 
+    color: white;
+    font-size:4rem;
+    font-weight: lighter;
+}
+/* Inicializamos con la pagina en blanco y efecto degradado columnas */
+.Block:before{   
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.05;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+            transform: skew(30deg) scaleY(1) translate(0, 0);  
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* Efecto al pasar el puntero */
+.Block:hover:before {
+    -webkit-transform: skew(0deg) scale(3) translate(0, 0); 
+            transform: skew(0deg) scale(3) translate(0, 0);
+    opacity: 0.1;
+}
+/* Estilos columnas y asignamos animación */
+#Block1{
+    background-color: #244F75;
+    left:0vw; 
+    -webkit-animation: aBlock1 1s cubic-bezier(0.23, 1, 0.32, 1) 0.1s both;
+}
+#Block2{
+    background-color: #60BFBF;
+    left: 20vw;
+    -webkit-animation: aBlock2 1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
+}
+#Block3{
+    background-color:#8C4B7E;
+    left: 40vw;
+    -webkit-animation: aBlock3 1s cubic-bezier(0.23, 1, 0.32, 1) 0.3s both;
+}
+#Block4{
+    background-color: #F8BB44;
+    left: 60vw; 
+    -webkit-animation: aBlock4 1s cubic-bezier(0.23, 1, 0.32, 1) 0.4s both;
+}
+#Block5{
+    background-color: #F24B4B; 
+    left: 80vw; 
+    -webkit-animation: aBlock5 1s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
+}
+/* Animaciones columnas */
+@keyframes aBlock1 {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+}
+@keyframes aBlock2 {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+}
+@keyframes aBlock3 {
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+}
+@keyframes aBlock4 {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+}
+@keyframes aBlock5 {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+}
